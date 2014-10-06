@@ -1,4 +1,4 @@
-﻿namespace Week4_CoffeeSales
+﻿namespace Week5_CoffeeSales
 {
     partial class BillingForm
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -54,16 +55,24 @@
             this.newOrderButton = new System.Windows.Forms.Button();
             this.summaryButton = new System.Windows.Forms.Button();
             this.exitButton = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.newOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(188, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 0;
@@ -73,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(381, 450);
+            this.label2.Location = new System.Drawing.Point(381, 474);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(84, 13);
             this.label2.TabIndex = 1;
@@ -89,7 +98,7 @@
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(16, 57);
+            this.groupBox1.Location = new System.Drawing.Point(16, 81);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(444, 178);
             this.groupBox1.TabIndex = 0;
@@ -238,7 +247,7 @@
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(16, 241);
+            this.groupBox3.Location = new System.Drawing.Point(16, 265);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(444, 125);
             this.groupBox3.TabIndex = 3;
@@ -301,7 +310,7 @@
             // 
             // newOrderButton
             // 
-            this.newOrderButton.Location = new System.Drawing.Point(50, 400);
+            this.newOrderButton.Location = new System.Drawing.Point(50, 424);
             this.newOrderButton.Name = "newOrderButton";
             this.newOrderButton.Size = new System.Drawing.Size(75, 23);
             this.newOrderButton.TabIndex = 1;
@@ -311,7 +320,7 @@
             // 
             // summaryButton
             // 
-            this.summaryButton.Location = new System.Drawing.Point(198, 400);
+            this.summaryButton.Location = new System.Drawing.Point(198, 424);
             this.summaryButton.Name = "summaryButton";
             this.summaryButton.Size = new System.Drawing.Size(75, 23);
             this.summaryButton.TabIndex = 2;
@@ -321,7 +330,7 @@
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(346, 400);
+            this.exitButton.Location = new System.Drawing.Point(346, 424);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(75, 23);
             this.exitButton.TabIndex = 3;
@@ -329,13 +338,63 @@
             this.exitButton.UseVisualStyleBackColor = true;
             this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(469, 24);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newOrderToolStripMenuItem,
+            this.summaryToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "&File";
+            // 
+            // newOrderToolStripMenuItem
+            // 
+            this.newOrderToolStripMenuItem.Name = "newOrderToolStripMenuItem";
+            this.newOrderToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newOrderToolStripMenuItem.Text = "&New Order";
+            // 
+            // summaryToolStripMenuItem
+            // 
+            this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
+            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.summaryToolStripMenuItem.Text = "&Summary";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            // 
             // BillingForm
             // 
             this.AcceptButton = this.calculateButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.clearButton;
-            this.ClientSize = new System.Drawing.Size(477, 472);
+            this.ClientSize = new System.Drawing.Size(469, 498);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.summaryButton);
             this.Controls.Add(this.newOrderButton);
@@ -344,6 +403,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "BillingForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -355,6 +415,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,6 +450,13 @@
         private System.Windows.Forms.Button summaryButton;
         private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.RadioButton cappuccinoRadioButton;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem newOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem summaryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 

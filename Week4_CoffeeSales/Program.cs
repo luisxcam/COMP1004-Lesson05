@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Week4_CoffeeSales
+namespace Week5_CoffeeSales
 {
     static class Program
     {
