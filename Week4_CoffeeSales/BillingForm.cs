@@ -226,6 +226,16 @@ namespace Week5_CoffeeSales
                 MessageBox.Show("No sales summary information to show", "Sales Summary", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     } 
      
 }
