@@ -49,7 +49,8 @@ namespace Week5_CoffeeSales
             quantityTextBox.Select();
             cappuccinoRadioButton.Checked = false;
             clearButton.Enabled = false;
-            newOrderButton.Enabled = false;
+            newOrderToolStripMenuItem.Enabled = false;
+            clearItemToolStripMenuItem.Enabled = false;
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
@@ -107,8 +108,9 @@ namespace Week5_CoffeeSales
 
                         //set the other controls
                         clearButton.Enabled = true;
-                        newOrderButton.Enabled = true;
                         taxCheckBox.Enabled = false;
+                        newOrderToolStripMenuItem.Enabled = true;
+                        clearItemToolStripMenuItem.Enabled = true;
                     }
                     else
                     {
@@ -186,7 +188,8 @@ namespace Week5_CoffeeSales
                 totalTextBox.Clear();
                 taxCheckBox.Enabled = true;
                 clearButton.Enabled = false;
-                newOrderButton.Enabled = false;
+                newOrderToolStripMenuItem.Enabled = false;
+                clearItemToolStripMenuItem.Enabled = false;
             }
 
             //add the totals for summary information
@@ -227,15 +230,71 @@ namespace Week5_CoffeeSales
             }
         }
 
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //show a message box with application details
+            String messageString;
+            messageString = "R 'n R Billing application \nProgrammed by: Luis Acevedo";
+            MessageBox.Show(messageString, "About Us", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void fontToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Allow the user to change the font of the output
+            //Save the current form
+            Font currentFont = fontDialog1.Font;
+
+            //Show the font dialog box
+            fontDialog1.ShowDialog();
+            currentFont = fontDialog1.Font;
+
+            //Apply the user font selected
+            subTotalTextBox.Font = currentFont;
+            taxTextBox.Font = currentFont;
+            totalTextBox.Font = currentFont;
+        }
+
+        private void colourToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //allow the user to change the color of the output
+            Color currentColor = colorDialog1.Color;
+            changeColor(out currentColor);
+
+            //Assign the new color to the text
+            subTotalTextBox.ForeColor = currentColor;
+            taxTextBox.ForeColor = currentColor;
+            totalTextBox.ForeColor = currentColor;
+        }
+
+        //Using OUT parameter
+        private void changeColor(out Color color){
+            colorDialog1.ShowDialog();
+            color = colorDialog1.Color;
+        }
+
+        //Using RETURN parameter
+        private Color changeColor(Color color)
+        {
+            colorDialog1.ShowDialog();
+            return colorDialog1.Color;
+        }
+
+        /* Useless Bullcrap */
         private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
-
+            //nothing
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-
+            //nothing
         }
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+            //nothing
+        }
+        /* Useless Bullcrap */
+
     } 
-     
 }
